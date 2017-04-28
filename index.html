@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hangman Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+		
+		<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				 <h1>DALLAS COWBOYS HANGMAN</h1>
+				 <p>Guess the Player Name to win!</p>
+				<p>Press Any Key To Get Started!</p>
+
+					<div id="test1"> </div>
+		</div>
+
+	
+		<div class="row">
+  		<div id="word-to-guess" class="col-md-5">
+  			<div id="hintImages">
+				<img src="http://placehold.it/350x350" alt="TBD"> 
+			</div>
+		</div>
+  		<div class="col-md-7">
+  			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title" id="wordFont">Current Word:</h3>
+				</div>
+				<div class="panel-body">
+					<h2 id="currentWord"></h2>
+						
+				</div>
+			</div>
+		<div id="resetWrapper">
+		<div class="panel panel-default">
+			<div id="wrongGuess" class="panel-body">
+				Letters Already Guessed:
+			</div>
+		</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div id="guessesLeft" class="panel-body">
+				 Number of Guesses Remaining: 
+			</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<span id="winCounter">Wins: </span>
+			</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<span id="lossCounter">Losses:  </span>
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>
+	</div>
+
+		</div>
+
+		
+
+	<script src="assets/javascript/game.js"></script> 
+
+</body>
+</html>

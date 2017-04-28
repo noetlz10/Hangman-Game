@@ -1,0 +1,51 @@
+body {
+	background: url("../images/DallasCowboys.jpg");
+
+}
+.container{
+	color: #0d254c;
+  
+}
+
+.jumbotron {
+	font-family: 'Alfa Slab One', cursive;
+  font-size: 10px;
+	text-align: center;
+	background-color: #aaa;
+  background: url();
+  max-width: 100%;
+
+}
+
+span.glyphicon-star {
+	font-size: 70px;
+}
+
+#test1{
+  font-size: 18px;
+}
+
+p {
+	text-align: center;
+}
+
+#wordFont {
+	color: #0d254c;	
+}
+
+
+.panel-title{
+	font-family: 'Alfa Slab One', cursive;
+	text-align: center;
+	font-weight: 700;
+	color: #0d254c;
+	
+
+}
+
+.panel-body{
+	font-family: 'Alfa Slab One', cursive;
+	text-align: center;
+	font-weight: 700;
+	color: #0d254c;
+}
