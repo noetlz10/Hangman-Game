@@ -8,6 +8,7 @@
   var wordBank = ["zeke", "prescott", "bailey", "bryant", "beasley", "witten"];
   var winImg = "../images/touchdown-img.jpg";
   var lossImg = "../images/sad-coach.jpg";
+  var sound = new Audio();
 
   //randomly select index out of wordBank array
   var targetWord = wordBank[Math.floor(Math.random() * wordBank.length)].toLowerCase();
@@ -19,15 +20,14 @@
     chosenWord[i] = "_ ";
   }
 
-  document.querySelector('#currentWord').innerHTML = chosenWord.join(" ");
-
+  document.getElementById("currentWord").innerHTML = chosenWord.join(" ");
   // track current word
   var letterCount = targetWord.length;
 
   // display stats
-  document.querySelector('#winCounter').innerHTML = "Wins: " + wins;
-  document.querySelector('#lossCounter').innerHTML = "Losses: " + losses;
-  document.querySelector('#guessesLeft').innerHTML = "Guesses Left: " + guessesLeft;
+  document.getElementById("winCounter").innerHTML = "Wins: " + wins;
+  document.getElementById("lossCounter").innerHTML = "Losses: " + losses;
+  document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
 
   // resets the game
   function resetHangman() {
@@ -46,15 +46,15 @@
 
     //document.querySelector('h1').innerHTML = "GUESS THE COWBOYS PLAYER!";
 
-    document.querySelector("#currentWord").innerHTML = chosenWord.join(" ");
+    document.getElementById("currentWord").innerHTML = chosenWord.join(" ");
 
     // display reset stats
-    document.querySelector("#winCounter").innerHTML = "Wins: " + wins;
-    document.querySelector("#lossCounter").innerHTML = "Losses: " + losses;
+    document.getElementById("winCounter").innerHTML = "Wins: " + wins;
+    document.getElementById("lossCounter").innerHTML = "Losses: " + losses;
 
-    document.querySelector("guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
+    document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
 
-    document.querySelector("#wrongGuess").innerHTML = "Letters Guessed: ";
+    document.getElementById("wrongGuess").innerHTML = "Letters Guessed: ";
 
     //document.querySelector('#resetWrapper').style.display = "block";
 
@@ -77,13 +77,13 @@
                 if (targetWord.charAt(i) === userGuess) {
                     chosenWord[i] = userGuess;
                     letterCount--;
-                    document.querySelector("#currentWord").innerHTML = chosenWord.join(" ");
+                    document.getElementById("currentWord").innerHTML = chosenWord.join(" ");
                 }
       }
 
       // see if userGuess is not in chosenWord and letter is in lettersGuessed array so no duplication occurs
       if ((targetWord.indexOf(userGuess) === -1) && (lettersGuessed.indexOf(userGuess) !== -1)) {
-              document.querySelector("#wrongGuess").innerHTML = "Letters Guessed: " + lettersGuessed.join(", ");
+              document.getElementById("wrongGuess").innerHTML = "Letters Guessed: " + lettersGuessed.join(", ");
               return;
       }
 
@@ -99,24 +99,22 @@
       if (letterCount === 0) {
         wins++;
         document.querySelector("h2").innerHTML = "You Got It!"; //display image instead of text
-        document.querySelector("#test1").innerHTML = "The Player was " + targetWord.toUpperCase() + ", Play again...";
+        document.getElementById("answerDisplay").innerHTML = "The answer was: " + targetWord.toUpperCase() + "! Play again...";
         //todo show winner image if have time in the image box instead of in the jumbotron
-        //document.querySelector("#resetWrapper").style.display = "none";
         setTimeout(resetHangman, 2700);
       } else if (guessesLeft === 0) {
           losses++;
+         
           document.querySelector("h2").innerHTML = "You Lost! Try harder next time.";
-          document.querySelector("#test1").innerHTML = "The Player was " + targetWord.toUpperCase() + ", Play again...";
+          document.getElementById("answerDisplay").innerHTML = "The answer was: " + targetWord.toUpperCase() + "! Play again...";
           //todo show loser image here if you have time
-          //document.querySelector("#hintImages").style.display ="none";
-          //setTimeout(resetHangman, event.keyCode);
           setTimeout(resetHangman, 2700);
       }
 
 
-        document.querySelector('#guessesLeft').innerHTML = "Guesses Left: " + guessesLeft;
+        document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
 
-        document.querySelector('#wrongGuess').innerHTML = "Letters Already Guessed: " + lettersGuessed.join(", ");
+        document.getElementById("wrongGuess").innerHTML = "Letters Already Guessed: " + lettersGuessed.join(", ");
     }
 
 

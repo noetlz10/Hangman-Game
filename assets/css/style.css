@@ -4,7 +4,7 @@ body {
 }
 .container{
 	color: #0d254c;
-  
+
 }
 
 .jumbotron {
@@ -18,11 +18,17 @@ body {
 }
 
 span.glyphicon-star {
-	font-size: 70px;
+	font-size: 25px;
 }
 
-#test1{
-  font-size: 18px;
+#answerDisplay{
+  
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 50px;
+  text-align: center;
+  background-color: #aaa;
+  background: url();
+  max-width: 100%;
 }
 
 p {
