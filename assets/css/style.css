@@ -7,6 +7,20 @@ body {
 
 }
 
+#picture {
+  max-width: 35%;
+  max-height: 35%;
+  margin-left: 100px;
+
+}
+
+#pictureL {
+   max-width: 35%;
+  max-height: 35%;
+  margin-left: 100px;
+
+}
+
 .jumbotron {
 	font-family: 'Alfa Slab One', cursive;
   font-size: 10px;

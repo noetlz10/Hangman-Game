@@ -6,9 +6,9 @@
   var lettersGuessed = [];
   var correctLetters = [];
   var wordBank = ["zeke", "prescott", "bailey", "bryant", "beasley", "witten"];
-  var winImg = "../images/touchdown-img.jpg";
-  var lossImg = "../images/sad-coach.jpg";
-  var sound = new Audio();
+  //var winImg = "../images/touchdown-img.jpg";
+  //var lossImg = "../images/sad-coach.jpg";
+  //var sound = new Audio();
 
   //randomly select index out of wordBank array
   var targetWord = wordBank[Math.floor(Math.random() * wordBank.length)].toLowerCase();
@@ -44,16 +44,12 @@
     letterCount = targetWord.length;
 
 
-    //document.querySelector('h1').innerHTML = "GUESS THE COWBOYS PLAYER!";
-
     document.getElementById("currentWord").innerHTML = chosenWord.join(" ");
 
     // display reset stats
     document.getElementById("winCounter").innerHTML = "Wins: " + wins;
     document.getElementById("lossCounter").innerHTML = "Losses: " + losses;
-
     document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
-
     document.getElementById("wrongGuess").innerHTML = "Letters Guessed: ";
 
     //document.querySelector('#resetWrapper').style.display = "block";
@@ -100,6 +96,7 @@
         wins++;
         document.querySelector("h2").innerHTML = "You Got It!"; //display image instead of text
         document.getElementById("answerDisplay").innerHTML = "The answer was: " + targetWord.toUpperCase() + "! Play again...";
+        document.getElementById("picture").style.display = "block";
         //todo show winner image if have time in the image box instead of in the jumbotron
         setTimeout(resetHangman, 2700);
       } else if (guessesLeft === 0) {
@@ -107,6 +104,7 @@
          
           document.querySelector("h2").innerHTML = "You Lost! Try harder next time.";
           document.getElementById("answerDisplay").innerHTML = "The answer was: " + targetWord.toUpperCase() + "! Play again...";
+          document.getElementById("pictureL").style.display = "block";
           //todo show loser image here if you have time
           setTimeout(resetHangman, 2700);
       }
