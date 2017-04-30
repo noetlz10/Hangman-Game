@@ -96,7 +96,7 @@
         wins++;
         document.querySelector("h2").innerHTML = "You Got It!"; //display image instead of text
         document.getElementById("answerDisplay").innerHTML = "The answer was: " + targetWord.toUpperCase() + "! Play again...";
-        document.getElementById("picture").style.display = "block";
+        //document.getElementById("picture").style.display = "block";
         //todo show winner image if have time in the image box instead of in the jumbotron
         setTimeout(resetHangman, 2700);
       } else if (guessesLeft === 0) {
@@ -104,7 +104,7 @@
          
           document.querySelector("h2").innerHTML = "You Lost! Try harder next time.";
           document.getElementById("answerDisplay").innerHTML = "The answer was: " + targetWord.toUpperCase() + "! Play again...";
-          document.getElementById("pictureL").style.display = "block";
+          //document.getElementById("pictureL").style.display = "block";
           //todo show loser image here if you have time
           setTimeout(resetHangman, 2700);
       }
